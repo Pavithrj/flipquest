@@ -1,14 +1,26 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/flipquest/vite.svg" />
+    <link rel="icon" type="image/png" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <script type="module" crossorigin src="/flipquest/assets/index-sIYQsTmm.js"></script>
-    <link rel="stylesheet" crossorigin href="/flipquest/assets/index-B_ilCw6F.css">
-  </head>
-  <body>
+    <title>FlipQuest</title>
+  <script type="module" crossorigin src="/flipquest/assets/index-Bh9aHGfj.js"></script>
+  <link rel="stylesheet" crossorigin href="/flipquest/assets/index-BovOH-IT.css">
+</head>
+
+<body>
     <div id="root"></div>
-  </body>
+
+    <script>
+        if (window.location.pathname.endsWith("/") && window.location.pathname !== "/") {
+            const noSlash = window.location.pathname.slice(0, -1);
+            const newUrl = window.location.origin + noSlash + window.location.search + window.location.hash;
+            window.history.replaceState(null, "", newUrl);
+        }
+    </script>
+
+</body>
+
 </html>
